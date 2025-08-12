@@ -55,7 +55,7 @@ function About() {
             <span className="text-white text-4xl lg:text-6xl">CoffeeNest</span>
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            CoffeeNest is your go-to mobile guide for finding, rating, and reviewing coffee shops. Whether you're
+            CoffeeNest is your go-to mobile guide for finding, rating, and reviewing coffee shops. Whether you&apos;re
             hunting for a smooth flat white, a strong espresso, or the perfect cold brew, we help you discover the best
             cafes near you — with honest reviews from real coffee lovers.
           </p>

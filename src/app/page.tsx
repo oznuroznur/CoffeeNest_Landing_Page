@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from "react"
 import Faq from "@/components/home/Faq"
 import About from "@/components/home/About"
 import Hero from "@/components/home/Hero"
+import Image from "next/image"
 
 export default function CoffeeNestLandingPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -59,13 +60,16 @@ export default function CoffeeNestLandingPage() {
   }, [])
 
   return (
+    <div className="min-h-screen bg-fixed bg-[url(/assets/lines.png)]">
+
+
     <div
       ref={containerRef}
-      className="min-h-screen bg-black"
+      className="min-h-screen "
       style={{
         background: `
-          radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, 
-            rgba(15, 67, 15, 0.15), rgba(220, 38, 38, 0.05), transparent 70%), 
+           radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, 
+                rgba(139, 69, 19, 0.25), rgba(160, 82, 45, 0.15), transparent 70%), 
           linear-gradient(135deg, 
             #000000 0%, 
             #0a0a0a 25%, 
@@ -110,7 +114,7 @@ export default function CoffeeNestLandingPage() {
         >
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden bg-white/10 border border-[#ACBDA8]/30 backdrop-blur-sm">
-              <img src="/logo.svg" alt="CoffeeNest" className="w-10 h-10" />
+              <Image src="/assets/logo.png" alt="CoffeeNest" className="w-10 h-10" width={10} height={10} />
             </div>
             <span className="text-white font-bold text-xl">CoffeeNest</span>
           </div>
@@ -123,7 +127,6 @@ export default function CoffeeNestLandingPage() {
           </div>
         </header>
       </div>
-
       {/* Hero Section */}
       <Hero />
 
@@ -153,7 +156,7 @@ export default function CoffeeNestLandingPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden bg-white/10 border border-[#ACBDA8]/20">
-              <img src="/logo.svg" alt="CoffeeNest" className="w-8 h-8 brightness-0 invert" />
+              <Image src="/assets/logo.png" alt="CoffeeNest" className="w-8 h-8 "  width={10} height={10}/>
             </div>
             <span className="text-2xl font-bold">CoffeeNest</span>
           </div>
@@ -163,6 +166,7 @@ export default function CoffeeNestLandingPage() {
           <div className="text-gray-400 text-sm">© 2024 CoffeeNest. All rights reserved.</div>
         </div>
       </footer>
+    </div>
     </div>
   )
 }
